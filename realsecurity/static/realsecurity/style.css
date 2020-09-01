@@ -1,0 +1,445 @@
+.navbar {
+  min-height: 13vh;
+}
+
+.body-home {
+  font-family: "Spinnaker", sans-serif;
+  color: #222;
+  font-weight: 500;
+}
+
+.textcolor-cyan {
+  color: cyan;
+}
+
+.welcome {
+  text-align: center;
+  width: 100%;
+  color: white;
+  padding: 3vh;
+  font-size: 30px;
+  font-weight: 550;
+  font-family: "Quantico", sans-serif;
+}
+
+.nav-list-home {
+  margin-left: 20vw;
+  font-weight: 600;
+}
+
+.nav-list-home > li {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  border-right: 2px solid;
+}
+.nav-list-home > li:last-child {
+  border: none;
+}
+
+.nav > li > a:hover {
+  color: black;
+  border-bottom: 3px solid cyan;
+}
+.nav > li > .active {
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar-fixed-top.scrolled {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+}
+
+.navbar-fixed-top.scrolled .nav-link {
+  color: #555;
+}
+
+.logo-navbar:hover {
+  transform: scale(1.05);
+}
+
+.home-section-new {
+  margin-top: 15vh;
+  margin-bottom: 5vh;
+  margin-right: 10vw;
+  margin-left: 10vw;
+}
+
+.vision-heading {
+  text-align: center;
+  font-family: "Quantico", sans-serif;
+  font-size: 50px;
+  align-self: center;
+  width: fit-content;
+  border-bottom: 3px solid cyan;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vision-content {
+  display: flex;
+  align-items: center;
+  text-align: justify;
+  font-family: "Spinnaker", sans-serif;
+  color: #262626;
+  font-size: 20px;
+}
+
+.vision-hr {
+  margin: 4vh 0vh;
+}
+
+.carousel-item {
+  height: 40rem;
+}
+
+/* TEAM */
+.team {
+  text-align: center;
+}
+
+.section-team {
+  margin-top: 25vh;
+  margin-bottom: 5vh;
+  background: cyan;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  border-radius: 80px;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 60px;
+
+  text-align: center;
+  font-family: "Quantico", sans-serif;
+  font-size: 50px;
+  align-self: center;
+  width: fit-content;
+  border-bottom: 3px solid white;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.team .team-item {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.team .team-item figure {
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.team .team-item figure figcaption {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(9, 9, 9, 0.6);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.team .team-item figure figcaption .info {
+  position: absolute;
+  color: #fff;
+  float: left;
+  bottom: 25px;
+  left: 20px;
+  margin-left: -80px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Spinnaker", sans-serif;
+}
+
+.team .team-item figure:hover figcaption {
+  opacity: 1;
+}
+
+.team .team-item figure:hover figcaption .info {
+  margin-left: 0;
+}
+
+.team .team-item figure figcaption .info h3 {
+  font-size: 20px;
+}
+
+.team .team-item figure figcaption .info p {
+  color: #fff;
+}
+
+.team .team-item figure:hover figcaption .social {
+  margin-bottom: 0;
+}
+
+.team .team-item figure figcaption .social {
+  position: absolute;
+  float: right;
+  bottom: 0px;
+  margin-bottom: 0px;
+  right: 20px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.team .team-item figure figcaption .social a {
+  color: #fff;
+  font-size: 15px;
+  width: 36px;
+  height: 36px;
+  background: #3f51b5;
+  display: inline-block;
+  text-align: center;
+  line-height: 36px;
+  border-radius: 2px;
+}
+
+/* Conatct start */
+
+.header-title {
+  text-align: center;
+  color: #00bfff;
+}
+
+#tip {
+  display: none;
+}
+
+.fadeIn {
+  animation-duration: 3s;
+}
+
+.form-control {
+  border-radius: 0px;
+  border: 1px solid #ededed;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.form-control:focus {
+  border: 1px solid #00bfff;
+}
+
+.textarea-contact {
+  resize: none;
+}
+
+.btn-send {
+  border: 5px solid black;
+  border-radius: 5px;
+  align-self: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-send:hover {
+  border: 2px solid cyan;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.second-portion {
+  margin-top: 50px;
+}
+
+.box > .icon {
+  text-align: center;
+  position: relative;
+}
+.box > .icon > .image {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  width: 88px;
+  height: 88px;
+  border: 8px solid white;
+  line-height: 88px;
+  border-radius: 50%;
+  background: cyan;
+  vertical-align: middle;
+}
+.box > .icon:hover > .image {
+  background: #333;
+}
+.box > .icon > .image > i {
+  font-size: 36px !important;
+  color: #fff !important;
+}
+.box > .icon:hover > .image > i {
+  color: white !important;
+}
+.box > .icon > .info {
+  margin-top: -15px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid #e0e0e0;
+  padding: 15px 0 10px 0;
+  min-height: 163px;
+}
+.box > .icon:hover > .info {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: #e0e0e0;
+  color: white;
+}
+.box > .icon > .info > h3.title {
+  font-family: "Spinnaker", sans-serif !important;
+  font-size: 16px;
+  color: #222;
+  font-weight: 700;
+}
+.box > .icon > .info > p {
+  font-family: "Spinnaker", sans-serif !important;
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5em;
+  margin: 20px;
+}
+.box > .icon:hover > .info > h3.title,
+.box > .icon:hover > .info > p,
+.box > .icon:hover > .info > .more > a {
+  color: #222;
+}
+.box > .icon > .info > .more a {
+  font-family: "Spinnaker", sans-serif !important;
+  font-size: 12px;
+  color: #222;
+  line-height: 12px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.box > .icon:hover > .info > .more > a {
+  color: #fff;
+  padding: 6px 8px;
+  background-color: #63b76c;
+}
+.box .space {
+  height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-form {
+    margin-top: 25px;
+  }
+
+  .btn-send {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .second-portion {
+    margin-top: 25px;
+  }
+}
+/* Conatct end */
+
+/*Footer */
+
+.section-footer {
+  padding: 100px 60px;
+  background-color: #000d1a;
+}
+
+.context-dark,
+.bg-gray-dark,
+.bg-primary {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-classic a,
+.footer-classic a:focus,
+.footer-classic a:active {
+  color: #ffffff;
+}
+.nav-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.nav-list li a:hover:before {
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 23px;
+
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-list li a:before {
+  content: "\f14f";
+  font: 400 21px/1 "Material Design Icons";
+  color: cyan;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -28px;
+  margin-right: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.22s ease;
+}
+
+.contact-list {
+  margin-left: 10px;
+}
+
+.footer-about-content {
+  margin-left: 10px;
+}
+
+.nav-list {
+  margin-left: 10px;
+}
+
+.footer-heading {
+  font-family: "Quantico", sans-serif;
+}
+
+.footer-heading:hover {
+  border-bottom: 3px solid cyan;
+  font-size: 140%;
+}
+
+.care-to-aware:hover {
+  margin-left: 8%;
+  -webkit-transform: scale(1.2);
+  text-shadow: 2px 2px 4px white, 0 0 25px cyan, 0 0 5px cyan;
+}
+
+.footer-link:hover {
+  border-bottom: 3px solid cyan;
+  color: white;
+  -webkit-transform: scale(1.1);
+}
