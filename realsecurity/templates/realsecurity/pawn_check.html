@@ -1,9 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Secured Eye-Contact</title>
-</head>
-<body bgcolor="cyan">
-	
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Secured Eye-Services</title>
+  </head>
+  <body bgcolor="clean">
+    <h1>Here we check, you are pawned or not..</h1>
+    <form action="pawn_user" method="post">
+      {% csrf_token %} Username: <input type="username" name="username" />
+      <input type="Submit" name="Check" /><br />
+    </form>
+    <form action="pawn_pass" method="post">
+      {% csrf_token %} Password: <input type="password" name="password" />
+      <input type="submit" name="Check" />
+    </form>
+  </body>
+</html>
