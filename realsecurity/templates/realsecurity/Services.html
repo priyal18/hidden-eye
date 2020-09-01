@@ -4,16 +4,15 @@
     <meta charset="UTF-8" />
     <title>Secured Eye - Services</title>
   </head>
-
   <body bgcolor="cyan">
-    <h1>Here we check, you are pawned or not..</h1>
-    <form action="pawn_user" method="post">
-      {% csrf_token %} Username: <input type="username" name="username" />
-      <input type="Submit" name="Check" /><br />
-    </form>
-    <form action="pawn_pass" method="post">
-      {% csrf_token %} Password: <input type="password" name="password" />
-      <input type="submit" name="Check" />
-    </form>
+    <h1>The Services we offer:</h1>
+    <h3>
+      <ul>
+        <li>Malware Analysis</li>
+        <li>Vulnerability Analysis</li>
+        <li><a href="pawn_check.html">Pawn Checking</a></li>
+        <li>List of buggy website</li>
+      </ul>
+    </h3>
   </body>
 </html>
