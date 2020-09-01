@@ -1,12 +1,297 @@
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Secured Eye-Services</title>
-  </head>
-  <body bgcolor="clean">
-    <h1>Here we check, you are pawned or not..</h1>
-    <form action="pawn_user" method="post">
+	<head>
+		<title>Pawn Check</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta
+		  name="viewport"
+		  content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static '/realsecurity/style.css' %}"></style>
+		<link
+		  rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+		  crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	</head>
+  <body class="body-home">
+    <!--Navbar-->
+	
+    <nav class="navbar navbar-expand-lg navbar-light sticky" id="navbar">
+
+      <div class="container">
+        
+        <div class="row">
+          
+          <a class="navbar-brand" href="#" ><img class="logo-navbar" src="{% static '/realsecurity/images/logo4.png' %}" ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarText">
+            
+            <ul class="nav justify-content-center nav-list-home">
+              <li class="nav-item active">
+                <a class="nav-link textcolor-cyan" href="home.html">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link textcolor-cyan" href="#">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link textcolor-cyan" href="Services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link textcolor-cyan" href="Contact.html">Contact Us</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </div>   
+    </nav>
+    <!--Main Section-->
+      <section class="pawn-section-new">
+        <hr>
+        <h1 class="pawn-heading">Want to Find out whether you have been <br>Pawned or Not!</h1>
+        <hr class="pawn-heading-hr">
+        <hr>
+        <p class="pawn-text"> You have come to the right place , we can help you to find out whether your email address or password has been pawned or not.</p>
+        <p class="pawn-text"> Don't worry , your privacy is our duty , we will never ever share any of our user's data , So sit back and relax.</p>
+        <h1 class="care-to-aware pawn-care"># Care to be Aware</h1>
+        <p class="pawn-text after-care">Let's find out , whether you email or password is saved from pawn or not.</p>
+        <div class="row row-pawn">
+          <div class="col-md-5 pawn-check-col pawn-check-col-1">
+            <h3 class="pawn-check-subhead">Want to Check your Email</h3>
+            <button id="0" class="btn btn-default btn-send btn-pawn" onclick="func(this.id)"> Click Here for Email Check </button>
+          </div>
+          <div class="col-md-1">
+            &nbsp;
+          </div>
+          <div class="col-md-5 pawn-check-col pawn-check-col-1">
+            <h3 class="pawn-check-subhead">Want to Check your Password</h3>
+            <button id ="1" class="btn btn-default btn-send btn-pawn" onclick="func(this.id)"> Click Here for Password Check </button>
+          </div>
+        </div>
+        <div id="form-pawn"></div>
+        <div id="result-pawn"></div>
+      </section>
+    <!--/Main Section-->
+    <!--Footer-->
+      <footer class="section-footer footer-classic context-dark bg-image">
+        <div class="container">
+          <div class="row row-30">
+            <div class="col-md-4 col-xl-5">
+        <div class="pr-xl-4"><h5 class="footer-heading">Hidden Eye</h5>
+        <div class="footer-about-content">
+                <p>Hidden Eye is a project who main motto is to help people to get digitised in a more safer way , protect their integrity , data and privacy in these tough and increasingly digitising times.</p>
+                <!-- Rights-->
+        <p class="care-to-aware"># Care to be aware</p>
+      </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <h5 class="footer-heading">Contacts</h5>
+              <dl class="contact-list">
+                <dt>Address:</dt>
+                <dd>&nbsp;JMIT,Radaur</dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>email:</dt>
+                <dd><a href="mailto:#" class="footer-link">&nbsp;priyal930gupta@gmail.com</a></dd>
+              </dl>
+              <dl class="contact-list">
+                <dt>phones:</dt>
+                <dd> &nbsp; (+91)-9624XXXXX
+                </dd>
+              </dl>
+            </div>
+            <div class="col-md-4 col-xl-3">
+              <h5 class="footer-heading">Links</h5>
+              <ul class="nav-list">
+                <li><a href="#" class="footer-link">&nbsp;About</a></li>
+                <li><a href="#" class="footer-link">&nbsp;Services</a></li>
+                <li><a href="#" class="footer-link">&nbsp;Our vision</a></li>
+                <li><a href="#" class="footer-link">&nbsp;Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row no-gutters social-container">
+          <div class="col">
+        <a class="social-inner footer-link" href="#">
+        <i class="fa fa-facebook" aria-hidden="true"></i> 
+        <br>
+        &nbsp;Facebook
+        <br>
+        </a>
+      </div>
+      <div class="col">
+      <a class="social-inner footer-link" href="#">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+        <br>
+        &nbsp;Linked-in
+        <br>
+        </a>
+      </div>
+      <div class="col">
+        <a class="social-inner footer-link" href="#">
+        <i class="fa fa-twitter" aria-hidden="true"></i> 
+        <br>
+        &nbsp;Twitter
+        <br>
+        </a>
+      </div>
+      <div class="col">
+        <a class="social-inner footer-link" href="#">
+        <i class="fa fa-google" aria-hidden="true"></i> 
+        <br>
+        &nbsp;Google
+        <br>
+        </a>
+      </div>
+
+      </footer>
+    <!--Footer-->
+    <!--Scripts-->
+      <script
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"
+      ></script>
+      <script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"
+      ></script>
+
+      <!--My script-->
+      
+      <script>
+        var down = document.getElementById("form-pawn"); 
+        function func(clicked_id)
+        { 
+          var parentDiv = document.getElementById("form-pawn");
+          if(parentDiv.hasChildNodes())
+          {
+            child1 = parentDiv.lastElementChild;
+            parentDiv.removeChild(child1);
+          }
+          
+          if(clicked_id == 0 )
+          {
+            var box = document.createElement("div");
+            box.classList.add("pawn-form-box","col-md-12");
+
+            var head = document.createElement("h2");
+            head.classList.add("pawn-form-head");
+            head.textContent = "Enter Email to Check :)";
+
+            var form = document.createElement("form"); 
+            form.setAttribute("method", "post"); 
+            form.setAttribute("action", "pawn_user");
+            form.classList.add("pawn-form-created");
+
+            // Create an input element for emailID 
+            var ID = document.createElement("input"); 
+            ID.setAttribute("type", "text"); 
+            ID.setAttribute("name", "username"); 
+            ID.setAttribute("placeholder", "E-Mail ID"); 
+            ID.classList.add('pawn-form-input'); 
+
+            // Create a submit button 
+            var s = document.createElement("input"); 
+            s.setAttribute("type", "submit"); 
+            s.setAttribute("name", "Check"); 
+            s.setAttribute("value", "Submit"); 
+            s.classList.add('pawn-form-submit','btn','btn-default', 'btn-send');
+
+            // Append the email_ID input to the form 
+            form.append(ID); 
+
+            // Append the button to the form 
+            form.append(s); 
+            box.appendChild(head);
+            box.appendChild(form);
+            document.getElementById("form-pawn").appendChild(box);
+            
+          }
+          else if(clicked_id == 1)
+          {
+            var box = document.createElement("div");
+            box.classList.add("pawn-form-box","col-md-12");
+
+            var head = document.createElement("h2");
+            head.classList.add("pawn-form-head");
+            head.textContent = "Enter Password to Check :)";
+            // Create a form synamically 
+            var form = document.createElement("form"); 
+            form.setAttribute("method", "post"); 
+            form.setAttribute("action", "pawn_pass"); 
+            form.classList.add("pawn-form-created");
+
+            
+
+            // Create an input element for password 
+            var PWD = document.createElement("input"); 
+            PWD.setAttribute("type", "password"); 
+            PWD.setAttribute("name", "password"); 
+            PWD.setAttribute("placeholder", "Password");
+            PWD.classList.add('pawn-form-input'); 
+
+            // Create a submit button 
+            var s = document.createElement("input"); 
+            s.setAttribute("type", "submit"); 
+            s.setAttribute("name", "Check"); 
+            s.setAttribute("value", "Submit"); 
+            s.classList.add('pawn-form-submit');
+
+            
+            // Append the password to the form 
+            form.append(PWD);  
+                
+            // Append the button to the form 
+            form.append(s); 
+            box.appendChild(head);
+            box.appendChild(form);
+            document.getElementById("form-pawn").appendChild(box);
+           
+          }
+
+         
+        }
+      </script>
+      
+      <!--My Scrpit-->
+    <!--/Scripts-->
+  </body>
+</html>
+	<!--Navbar-->
+
+<!--Form
+  <form action="pawn_user" method="post">
       {% csrf_token %} Username: <input type="username" name="username" />
       <input type="Submit" name="Check" /><br />
     </form>
@@ -14,5 +299,4 @@
       {% csrf_token %} Password: <input type="password" name="password" />
       <input type="submit" name="Check" />
     </form>
-  </body>
-</html>
+-->
