@@ -27,6 +27,7 @@
 
 .nav-list-home {
   margin-left: 20vw;
+  margin-right: 0vw;
   font-weight: 600;
 }
 
@@ -618,4 +619,17 @@ ol {
 
 .input-vul {
   width: 60%;
+}
+
+/* Services.html*/
+
+.services-hr {
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+}
+
+.services-text {
+  font-size: 17px;
+  margin: 6vh auto;
+  text-align: center;
 }

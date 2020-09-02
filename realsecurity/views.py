@@ -1,17 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+
+from . import achilles
+#from PredictFromModel import prediction
+import joblib 
+import json
 # Create your views here.
 def home(request):
 	return render(request,'realsecurity/home.html')
 def Services(request):
 	return render(request,'realsecurity/Services.html')
-def Contact(request):
-	return render(request,'realsecurity/Contact.html')
+
 def pawn_check(request):
 	return render(request,'realsecurity/pawn_check.html')
-def vulnerability_check(request):
-	return render(request,'realsecurity/vulnerability_check.html')
+
 
 @csrf_exempt
 def pawn_user(request):
@@ -46,3 +49,17 @@ def pawn_pass(request):
 				return render(request,'realsecurity/pawn_check.html',{'result':result})
 		result="Good news — no pwnage found"
 		return render(request,'realsecurity/pawn_check.html',{'result':result})
+
+def vulnerability_check(request):
+	return render(request,'realsecurity/vulnerability_check.html')
+
+def vuln(request):
+	url=request.POST["url"]
+	if(url==""):
+		vulnerabilities = "Seems like you forgot to enter a URL"
+	else:
+		vulnerabilities = achilles.basics(url)
+
+	vulnerable = vulnerabilities.split("\n")
+	return render(request,'realsecurity/result.html',{'vulnerable':vulnerable})
+	

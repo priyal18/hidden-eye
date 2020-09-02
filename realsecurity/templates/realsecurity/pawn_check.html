@@ -93,9 +93,16 @@
         <div id="form-pawn"></div>
         <br>
         <div id="result-pawn" >
-            <h1 class="result-pawn-style" style="text-align:center;">
+            {% if "Oh no - You have been Pwned!!! :(" == "{{result}}" %}
+             <h1 class="result-pawn-style" style="text-align:center; color: red;">
             {{result}}
-            </h1>
+              </h1>
+            {% else %}
+            <h1 class="result-pawn-style" style="text-align:center; ">
+              {{result}}
+                </h1>
+
+            {% endif %}
         </div>
         <br>
       </section>

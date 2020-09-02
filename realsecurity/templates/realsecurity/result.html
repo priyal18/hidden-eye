@@ -1,10 +1,208 @@
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Secured Eye-Services</title>
-  </head>
-  <body bgcolor="cyan">
-    <center><h1>Result : {{result}}</h1></center>
-  </body>
+	<head>
+		<title>Vulnerability Scanner</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta
+		  name="viewport"
+		  content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Spinnaker&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{% static '/realsecurity/style.css' %}"></style>
+		<link
+		  rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		  integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+		  crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	</head>
+    <body class="body-home">
+        <!--Navbar-->
+        
+        <nav class="navbar navbar-expand-lg navbar-light sticky" id="navbar">
+
+        <div class="container">
+            
+            <div class="row">
+            
+            <a class="navbar-brand" href="home.html" ><img class="logo-navbar" src="{% static '/realsecurity/images/logo4.png' %}" ></a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarText"
+                aria-controls="navbarText"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarText">
+                
+                <ul class="nav justify-content-center nav-list-home">
+                <li class="nav-item active">
+                    <a class="nav-link textcolor-cyan" href="home.html">
+                    Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link textcolor-cyan" href="index.html#vision">Our Vision</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link textcolor-cyan" href="Services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link textcolor-cyan" href="index.html#contact">Contact Us</a>
+                </li>
+                </ul>
+                
+            </div>
+            </div>
+        </div>   
+        </nav>
+        <!--NAvbar-->
+        <!--Main section-->
+        <section class="pawn-section-new">
+          <hr>
+          <h1 class="pawn-heading">Vulnerability Report </h1>
+          <hr class="pawn-heading-hr">
+          <hr>
+          <h1 class="care-to-aware pawn-care"># Care to be Aware</h1>
+          
+      
+
+          {% if "Nice job! Your HTML document is secure!" == "{{vulnerable[0]}}" %}
+        
+            <h1 class="result-pawn-style" style="text-align:center;">
+              {{vulnerable}}
+            </h1>
+          {% elif "Invalid Url found!" == "{{vulnerable[0]}}" %}
+            
+            <h1 class="result-pawn-style" style="text-align:center;">
+                {{vulnerable}}
+            </h1>
+            
+          {% else %}
+            <table border="1px">
+              <tr>
+                <th> Issue </th>
+                <th> Comment on Issue </th>
+              </tr>
+              {% for vul in vulnerable %}
+              
+                <tr>
+                  <td>{{vul}}</td>
+                  <td>{{vul.nextitem}}</td>
+                  
+                </tr>
+            
+              {% endfor %}
+            </table>
+          {% endif %}
+
+
+          
+          <br>
+        </section>
+        <!--Main Section-->
+        <!--Footer-->
+        <footer class="section-footer footer-classic context-dark bg-image">
+            <div class="container">
+            <div class="row row-30">
+                <div class="col-md-4 col-xl-5">
+            <div class="pr-xl-4"><h5 class="footer-heading">Hidden Eye</h5>
+            <div class="footer-about-content">
+                    <p>Hidden Eye is a project who main motto is to help people to get digitised in a more safer way , protect their integrity , data and privacy in these tough and increasingly digitising times.</p>
+                    <!-- Rights-->
+            <p class="care-to-aware"># Care to be aware</p>
+        </div>
+                </div>
+                </div>
+                <div class="col-md-4">
+                <h5 class="footer-heading">Contacts</h5>
+                <dl class="contact-list">
+                    <dt>Address:</dt>
+                    <dd>&nbsp;JMIT,Radaur</dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>email:</dt>
+                    <dd><a href="mailto:#" class="footer-link">&nbsp;priyal930gupta@gmail.com</a></dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>phones:</dt>
+                    <dd> &nbsp; (+91)-9624XXXXX
+                    </dd>
+                </dl>
+                </div>
+                <div class="col-md-4 col-xl-3">
+                <h5 class="footer-heading">Links</h5>
+                <ul class="nav-list">
+                    <li><a href="#" class="footer-link">&nbsp;About</a></li>
+                    <li><a href="#" class="footer-link">&nbsp;Services</a></li>
+                    <li><a href="#" class="footer-link">&nbsp;Our vision</a></li>
+                    <li><a href="#" class="footer-link">&nbsp;Contact Us</a></li>
+                </ul>
+                </div>
+            </div>
+            </div>
+            <div class="row no-gutters social-container">
+            <div class="col">
+            <a class="social-inner footer-link" href="#">
+            <i class="fa fa-facebook" aria-hidden="true"></i> 
+            <br>
+            &nbsp;Facebook
+            <br>
+            </a>
+        </div>
+        <div class="col">
+        <a class="social-inner footer-link" href="#">
+            <i class="fa fa-linkedin" aria-hidden="true"></i>
+            <br>
+            &nbsp;Linked-in
+            <br>
+            </a>
+        </div>
+        <div class="col">
+            <a class="social-inner footer-link" href="#">
+            <i class="fa fa-twitter" aria-hidden="true"></i> 
+            <br>
+            &nbsp;Twitter
+            <br>
+            </a>
+        </div>
+        <div class="col">
+            <a class="social-inner footer-link" href="#">
+            <i class="fa fa-google" aria-hidden="true"></i> 
+            <br>
+            &nbsp;Google
+            <br>
+            </a>
+        </div>
+
+        </footer>
+        <!--Footer-->
+        <!--Scripts-->
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
