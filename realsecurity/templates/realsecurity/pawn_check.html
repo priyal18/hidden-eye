@@ -91,7 +91,13 @@
           </div>
         </div>
         <div id="form-pawn"></div>
-        <div id="result-pawn"></div>
+        <br>
+        <div id="result-pawn" >
+            <h1 class="result-pawn-style" style="text-align:center;">
+            {{result}}
+            </h1>
+        </div>
+        <br>
       </section>
     <!--/Main Section-->
     <!--Footer-->
@@ -186,8 +192,11 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"
       ></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
       <!--My script-->
+
+      
       
       <script>
         var down = document.getElementById("form-pawn"); 
@@ -195,6 +204,13 @@
         { 
           var parentDiv = document.getElementById("form-pawn");
           if(parentDiv.hasChildNodes())
+          {
+            child1 = parentDiv.lastElementChild;
+            parentDiv.removeChild(child1);
+          }
+
+          var parentRes = document.getElementById("result-pawn");
+          if(parentDiv.firstChild)
           {
             child1 = parentDiv.lastElementChild;
             parentDiv.removeChild(child1);
@@ -212,6 +228,7 @@
             var form = document.createElement("form"); 
             form.setAttribute("method", "post"); 
             form.setAttribute("action", "pawn_user");
+            form.setAttribute("name","form_name");
             form.classList.add("pawn-form-created");
 
             // Create an input element for emailID 
@@ -246,13 +263,14 @@
             var head = document.createElement("h2");
             head.classList.add("pawn-form-head");
             head.textContent = "Enter Password to Check :)";
+
             // Create a form synamically 
             var form = document.createElement("form"); 
             form.setAttribute("method", "post"); 
             form.setAttribute("action", "pawn_pass"); 
+            form.setAttribute("name","form_name");
             form.classList.add("pawn-form-created");
 
-            
 
             // Create an input element for password 
             var PWD = document.createElement("input"); 
@@ -282,7 +300,10 @@
 
          
         }
+
       </script>
+     
+      
       
       <!--My Scrpit-->
     <!--/Scripts-->

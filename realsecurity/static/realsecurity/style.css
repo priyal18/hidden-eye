@@ -562,3 +562,60 @@ ol {
 .pawn-form-input:hover {
   transform: scale(1.05);
 }
+
+.result-pawn-style {
+  text-align: center;
+  padding: 30px;
+  margin: 2vh;
+}
+
+/*Vulnerability Check*/
+.box-vul {
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 35px;
+  box-shadow: 1px 1px 1px 1px black;
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  max-width: 860px !important;
+  margin: 35px auto;
+
+  text-align: center;
+}
+
+.box-vul:hover {
+  -webkit-transform: scale(1.1);
+  box-shadow: 8px 8px 4px black, 0 0 35px cyan, 0 0 5px #000d1a;
+}
+
+.box-heading-vul {
+  margin-top: 0;
+  font-size: 30px;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+}
+
+.second-text-vul {
+  padding-bottom: 35px;
+  font-size: 18px;
+}
+
+.vul-section-new {
+  margin-top: 12vh;
+  margin-bottom: 12vh;
+}
+
+.vul-button {
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+  padding: 2vh;
+}
+
+.input-vul {
+  width: 60%;
+}
