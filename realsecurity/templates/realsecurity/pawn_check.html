@@ -55,9 +55,16 @@
               <li class="nav-item">
                 <a class="nav-link textcolor-cyan" href="#">About Us</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link textcolor-cyan" href="Services.html">Services</a>
-              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle textcolor-cyan" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Services
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="vulnerability_check.html">Vulnerability Scanner</a>
+                  <a class="dropdown-item" href="#">Malware Detection</a>
+                  <a class="dropdown-item" href="#">Other Services</a>
+                </div>
+            </li>
               <li class="nav-item">
                 <a class="nav-link textcolor-cyan" href="Contact.html">Contact Us</a>
               </li>
@@ -93,8 +100,8 @@
         <div id="form-pawn"></div>
         <br>
         <div id="result-pawn" >
-            {% if "Oh no - You have been Pwned!!! :(" == "{{result}}" %}
-             <h1 class="result-pawn-style" style="text-align:center; color: red;">
+            {% if "Oh no - You have been Pwned!!! :(" == result or "Oh no - Pwned!!!" == result%}
+             <h1 class="result-pawn-style" style="text-align:center; background-color: red; box-shadow: 2px 2px 4px black; color:white;">
             {{result}}
               </h1>
             {% else %}

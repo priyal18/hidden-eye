@@ -55,8 +55,15 @@
                 <li class="nav-item">
                     <a class="nav-link textcolor-cyan" href="index.html#vision">Our Vision</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link textcolor-cyan" href="Services.html">Services</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle textcolor-cyan" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="pawn_check.html">Pawn Check</a>
+                      <a class="dropdown-item" href="vulnerability_check.html">Vulnerability Scan</a>
+                      <a class="dropdown-item" href="#">Other Services</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link textcolor-cyan" href="index.html#contact">Contact Us</a>
@@ -70,45 +77,37 @@
         <!--NAvbar-->
         <!--Main section-->
         <section class="pawn-section-new">
-          <hr>
+          <hr class="result-hr">
           <h1 class="pawn-heading">Vulnerability Report </h1>
           <hr class="pawn-heading-hr">
-          <hr>
-          <h1 class="care-to-aware pawn-care"># Care to be Aware</h1>
-          
-      
-
-          {% if "Nice job! Your HTML document is secure!" == "{{vulnerable[0]}}" %}
+          <hr class="result-hr">
+          <h1 class="care-to-aware-result pawn-care"># Care to be Aware</h1>
+      	    {% if "Nice job! Your HTML document is secure!" == vulnerabilities or "Invalid Url found!" == vulnerabilities or "Seems like you forgot to enter a URL" == vulnerabilities%}
         
-            <h1 class="result-pawn-style" style="text-align:center;">
-              {{vulnerable}}
-            </h1>
-          {% elif "Invalid Url found!" == "{{vulnerable[0]}}" %}
-            
-            <h1 class="result-pawn-style" style="text-align:center;">
-                {{vulnerable}}
-            </h1>
-            
-          {% else %}
-            <table border="1px">
-              <tr>
-                <th> Issue </th>
-                <th> Comment on Issue </th>
-              </tr>
-              {% for vul in vulnerable %}
-              
-                <tr>
-                  <td>{{vul}}</td>
-                  <td>{{vul.nextitem}}</td>
-                  
-                </tr>
-            
-              {% endfor %}
-            </table>
-          {% endif %}
+                <h1 class="result-vul-style" style="text-align:center;">
+                {{vulnerabilities}}
+                </h1>
+            {% else %}
+                
+                <h3 class="result-pawn-style" style="text-align:center; background-color: red; box-shadow: 2px 2px 4px black; color:white;">Oh No !!! , we found some vulnerabilities in the site :(</h3>
+                <table class="result-table table-border">
+                    <tr>
+                        <th class="table-border table-heading"> Issue </th>
+                        <th class="table-border table-heading"> Comment on Issue </th>
+                    </tr>
+                    {% for vul,des in vulnerable %}
+                
+                            <tr>
+                            <td class="table-border">{{vul}}</td>
+                            <td class="table-border">{{des}}</td>
+                            
+                            </tr>
+                        
+                        
+                    {% endfor %}
+                </table>
 
-
-          
+            {% endif %}
           <br>
         </section>
         <!--Main Section-->
