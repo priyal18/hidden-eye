@@ -22,6 +22,20 @@
 		  crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+		<style>
+			.card-deck{
+				display:none
+			}
+			@media screen and (max-width: 572px) and (orientation: portrait){
+				.iq-features {
+					display:none;
+				}
+				.card-deck  {
+					display:block
+				}
+			}
+		</style>
+
 	</head>
   <body class="body-home">
 	<noscript>   
@@ -234,6 +248,29 @@
 					 </div>
 				  </div>
 			  </section>
+
+			  <div class="card-deck">
+				<div class="card bg-primary">
+				  <div class="card-body text-center">
+					<a class="card-text" href="vulnerability_check.html" style="color:white ; font-size:20px;">Vulerability Scan</a>
+				  </div>
+				</div>
+				<div class="card bg-warning">
+				  <div class="card-body text-center">
+					<a class="card-text" href="pawn_check.html" style="color:white ; font-size:20px;">Pawn Check</a>
+				  </div>
+				</div>
+				<div class="card bg-success">
+				  <div class="card-body text-center">
+					<a class="card-text" href="#" style="color:white ; font-size:20px;">Info</a>
+				  </div>
+				</div>
+				<div class="card bg-danger">
+				  <div class="card-body text-center">
+					<a class="card-text" href="#" style="color:white ; font-size:20px;">Image Malware Scan</a>
+				  </div>
+				</div>
+			  </div>
 				<p class="services-text">Hoping that we will be able to serve you well :) .</p>
 
 			
