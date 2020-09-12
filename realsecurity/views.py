@@ -44,7 +44,7 @@ def pawn_user(request):
 
     username += '\n'
     result = ""
-    with open('/home/priyal/Desktop/word_list.txt', 'r') as f:
+    with open('word_list.txt', 'r') as f:
         for line in f:
             if line == username:
                 result = "Oh no - You have been Pwned!!! :("
