@@ -61,7 +61,7 @@ def pawn_pass(request):
         return render(request, 'realsecurity/pawn_check.html', {'result': result})
     password += '\n'
     result = ""
-    with open('/home/priyal/Desktop/word_list.txt', 'r') as f:
+    with open('word_list.txt', 'r') as f:
         for line in f:
             if line == password:
                 result = "Oh no - Pwned!!!"
